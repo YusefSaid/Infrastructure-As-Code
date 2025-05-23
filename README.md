@@ -1,5 +1,5 @@
 # Infrastructure as Code with Terraform and Ansible
-Test comment -- 
+
 This project demonstrates how to use Infrastructure as Code (IaC) principles with Terraform and Ansible to deploy a CTFd platform on OpenStack.
 
 ## Prerequisites
