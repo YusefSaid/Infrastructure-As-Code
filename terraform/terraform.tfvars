@@ -1,0 +1,5 @@
+group_number    = "33"
+ssh_key_name    = "group_33_key"
+image_name      = "ubuntu-noble"
+flavor_name     = "medium"
+external_network = "provider"

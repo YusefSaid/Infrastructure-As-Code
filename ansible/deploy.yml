@@ -1,0 +1,8 @@
+---
+- name: Deploy CTFd with Docker
+  hosts: ctfd_servers
+  become: yes
+  roles:
+    - common
+    - docker
+    - ctfd
