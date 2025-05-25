@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+export OS_USERNAME=IKT114_group_33_c43dda7c
+export OS_PROJECT_NAME=IKT114_group_33_c43dda7c
+export OS_PASSWORD=c43dda7c61c14324a260bbc0130433e4
+export OS_USER_DOMAIN_NAME=Default
+export OS_PROJECT_DOMAIN_NAME=Default
+export OS_AUTH_URL=http://kaun.uia.no:5000/v3
+export OS_IDENTITY_API_VERSION=3
+
