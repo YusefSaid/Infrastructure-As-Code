@@ -10,7 +10,7 @@ resource "openstack_compute_instance_v2" "ctfd_server" {
   }
 
   security_groups = [
-    openstack_networking_secgroup_v2.ctfd_security_group.name
+    openstack_networking_secgroup_v2.ctfd_security_group.id
   ]
 }
 
