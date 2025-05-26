@@ -1,3 +1,4 @@
+---
 - name: Deploy CTFd with Docker
   hosts: ctfd_servers
   become: yes
@@ -24,10 +25,13 @@
       args:
         creates: /usr/bin/docker
 
-    - name: Install Docker Compose
-      pip:
-        name: docker-compose
-        state: present
+    - name: Install Docker Compose via binary download
+      get_url:
+        url: "https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-linux-x86_64"
+        dest: /usr/local/bin/docker-compose
+        mode: '0755'
+        owner: root
+        group: root
 
     - name: Start and enable Docker service
       service:
@@ -123,6 +127,6 @@
           }
 
     - name: Start CTFd with Docker Compose
-      command: docker-compose up -d
+      command: docker compose up -d
       args:
         chdir: /opt/ctfd
