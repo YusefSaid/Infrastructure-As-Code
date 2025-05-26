@@ -1,6 +1,6 @@
 # Create a security group for CTFd server
 resource "openstack_networking_secgroup_v2" "ctfd_security_group" {
-  name        = "ctfd_security_group_${var.group_number}"
+  name = "ctfd_security_group_33_unique_v2"
   description = "Security group for CTFd server"
 }
 
