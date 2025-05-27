@@ -3,6 +3,12 @@ echo "Deploying infrastructure..."
 cd terraform
 terraform apply -auto-approve
 
+# Initialize Terraform if not already done
+if [ ! -f ".terraform.lock.hcl" ]; then
+    echo "Initializing Terraform..."
+    terraform init
+fi
+
 echo "Getting server IP..."
 FLOATING_IP=$(terraform output -raw ctfd_server_ip)
 
