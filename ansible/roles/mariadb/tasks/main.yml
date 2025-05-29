@@ -1,0 +1,6 @@
+---
+- name: Create MariaDB data directory
+  file:
+    path: /opt/ctfd/CTFd/mysql
+    state: directory
+    mode: '0755'

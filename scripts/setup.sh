@@ -41,4 +41,4 @@ terraform init
 echo "Environment setup complete!"
 echo "Next steps:"
 echo "1. Update terraform.tfvars with your group number and SSH key name"
-echo "2. Run ./scripts/deploy.sh to deploy the infrastructure"
+echo "2. Run ./scripts/update-and-deploy.sh to deploy the infrastructure"

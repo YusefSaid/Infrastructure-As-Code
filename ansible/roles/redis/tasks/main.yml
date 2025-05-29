@@ -1,0 +1,6 @@
+---
+- name: Create Redis data directory
+  file:
+    path: /opt/ctfd/CTFd/redis
+    state: directory
+    mode: '0755'

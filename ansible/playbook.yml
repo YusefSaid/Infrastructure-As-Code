@@ -1,0 +1,17 @@
+---
+- name: Deploy CTFd Infrastructure
+  hosts: ctfd_servers
+  become: yes
+  roles:
+    - common
+    - docker
+    - mariadb
+    - redis
+    - ctfd
+    - nginx
+
+  post_tasks:
+    - name: Start CTFd with Docker Compose
+      command: docker compose up -d
+      args:
+        chdir: /opt/ctfd

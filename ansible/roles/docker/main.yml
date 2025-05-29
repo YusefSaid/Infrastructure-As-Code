@@ -1,31 +1,20 @@
 ---
-- name: Add Docker GPG key
-  apt_key:
-    url: https://download.docker.com/linux/ubuntu/gpg
-    state: present
+- name: Install Docker via script
+  shell: |
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sh get-docker.sh
+  args:
+    creates: /usr/bin/docker
 
-- name: Add Docker repository
-  apt_repository:
-    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
-    state: present
+- name: Install Docker Compose via binary download
+  get_url:
+    url: "https://github.com/docker/compose/releases/download/v2.24.0/docker-compose-linux-x86_64"
+    dest: /usr/local/bin/docker-compose
+    mode: '0755'
+    owner: root
+    group: root
 
-- name: Install Docker
-  apt:
-    name: docker-ce
-    state: present
-
-- name: Install Docker Compose
-  pip:
-    name: docker-compose
-    state: present
-
-- name: Add current user to docker group
-  user:
-    name: "{{ ansible_user }}"
-    groups: docker
-    append: yes
-
-- name: Ensure Docker service is started and enabled
+- name: Start and enable Docker service
   service:
     name: docker
     state: started
