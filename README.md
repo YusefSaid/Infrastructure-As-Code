@@ -51,7 +51,8 @@ export OS_AUTH_URL=http://kaun.uia.no:5000/v3
 export OS_IDENTITY_API_VERSION=3
 ```
 ## Architecture Overview
-<img width="1588" alt="Exercise 03 - Cloud instance initialization (3)" src="https://github.com/user-attachments/assets/a3abbc81-5821-4695-a523-6ac3d90d5bf3" />
+
+<img width="1588" alt="Exercise 03 - Cloud instance initialization (4)" src="https://github.com/user-attachments/assets/49528f7b-acbc-4533-b83d-e22e5856f35b" />
 
 ## Project Structure
 
