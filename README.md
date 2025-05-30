@@ -6,6 +6,7 @@ This project sets up a complete CTFd (Capture The Flag) platform using Infrastru
 
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
+- [Architecture Overview](#Architecture Overview)
 - [Project Structure](#project-structure)
 - [Quick Start](#quick-start)
 - [Components](#components)
@@ -49,6 +50,8 @@ export OS_PROJECT_DOMAIN_NAME=Default
 export OS_AUTH_URL=http://kaun.uia.no:5000/v3
 export OS_IDENTITY_API_VERSION=3
 ```
+## Architecture Overview
+<img width="1588" alt="Exercise 03 - Cloud instance initialization (3)" src="https://github.com/user-attachments/assets/a3abbc81-5821-4695-a523-6ac3d90d5bf3" />
 
 ## Project Structure
 
