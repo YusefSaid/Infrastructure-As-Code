@@ -6,7 +6,7 @@ This project sets up a complete CTFd (Capture The Flag) platform using Infrastru
 
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
-- [Architecture Overview](#Architecture Overview)
+- [Architecture Overview](#architecture-Overview)
 - [Project Structure](#project-structure)
 - [Quick Start](#quick-start)
 - [Components](#components)
